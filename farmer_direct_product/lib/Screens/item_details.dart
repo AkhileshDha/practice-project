@@ -13,13 +13,13 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text("Item Details", style: TextStyle(
+        title: const Text("Item Details", style: TextStyle(
           color: Colors.white
         ),),
         actions: [
           GestureDetector(
             onTap: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ProfileScreen()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const ProfileScreen()));
             },
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -30,7 +30,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                   borderRadius: BorderRadius.circular(9.0),
                   color: Colors.white,
                 ),
-                child: Icon(Icons.person,color: Colors.green,),
+                child: const Icon(Icons.person,color: Colors.green,),
               ),
             ),
           ),
@@ -43,7 +43,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                 borderRadius: BorderRadius.circular(9.0),
                 color: Colors.white,
               ),
-              child: Icon(Icons.shopping_cart_outlined,color: Colors.green,),
+              child: const Icon(Icons.shopping_cart_outlined,color: Colors.green,),
             ),
           ),
           Padding(
@@ -55,7 +55,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                 borderRadius: BorderRadius.circular(9.0),
                 color: Colors.white,
               ),
-              child: Icon(Icons.search_sharp,color: Colors.green,),
+              child: const Icon(Icons.search_sharp,color: Colors.green,),
             ),
           ),
         ],
@@ -65,10 +65,10 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(
+            const Image(
                 image: AssetImage("images/mirchi.png")),
-            SizedBox(height: 10.0,),
-            Row(
+            const SizedBox(height: 10.0,),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
               Row(
@@ -90,21 +90,122 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                 ],
               )
             ],),
-            SizedBox(height: 10.0,),
-            Row(
+            const SizedBox(height: 10.0,),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Mirchi",style: TextStyle(
+                Text(
+                  "Mirchi",style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16
                 ),),
                 Text("2kg")
               ],
-            )
+            ),
+            const Row(
+              children: [
+                Icon(Icons.star_border_outlined,size: 12,),
+                Icon(Icons.star_border_outlined,size: 12,),
+                Icon(Icons.star_border_outlined,size: 12,),
+                Icon(Icons.star_border_outlined,size: 12,),
+                Icon(Icons.star_border_outlined,size: 12,),
+                Text("1")
+                
+              ],
+            ),
+            const Text(
+              "You Save Rs 51.00",style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.green
+            ),
+            ),
+            Row(
+              children: [
+                Text("99.00",style: TextStyle(
+                  fontWeight: FontWeight.bold
+                ),),
+                SizedBox(width: 5),
+                Stack(
+                  children: [
+                    const Text("Rs150.00"),
 
-          ],
-        ),
-      ),
-    );
-  }
+                    Positioned(
+                        bottom: 9 ,
+                        right: 0,
+                        left: 0,
+                        child:Container(
+                          height: 2,
+                          width: 30.0,
+                          color: Colors.black38,
+                        )
+                    )
+                  ],
+                ),
+              ],
+            ),
+            Row(
+              children: [
+            Container(
+              height: 90,
+              width: 180.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(9.0),
+                border: Border.all(
+                  color: Colors.green
+                )
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.green,
+                    ),
+                    child: Icon(Icons.shopping_bag_outlined),
+                  ),
+                  Text("10 Days Returnable")
+                ],
+              ),
+            ),
+                SizedBox(width: 10,),
+                Container(
+                  height: 90,
+                  width: 200.0,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(9.0),
+                      border: Border.all(
+                          color: Colors.green
+                      )
+                  ),
+                  child: Column(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.green,
+                        ),
+                        child: Icon(Icons.shopping_bag_outlined),
+                      ),
+                      Text("Order Can Cancel Till Order\nProcessed")
+                    ],
+                  ),
+                ),
+
+              ],
+            ),
+            Row(
+              children: [
+                Text(")"Quantity
+    ],
+    )
+    ],
+    ),
+    ),LLLLLLLLLLLLLLLAAAaaaassssSSSLLLLLLLLLllLLLLlllLLLL""""""""
 }

@@ -41,29 +41,10 @@ class _LoanApprovedScreenState extends State<LoanApprovedScreen> {
       ),
       body:Container(
         color: const Color(0xFFD9D9D9),
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
               const SizedBox(height: 40),
-              Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Container(
-                      height: 350,
-                      width: MediaQuery.sizeOf(context).width,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child:  Column(
-                        children: [
-                          const SizedBox(height: 60,),
-                          const Text('Status On Pending',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 28),),
-                          const SizedBox(height: 10,),
                           const Text(
                             '''It’s take 2-4 Working days to transfer the
 money to your bank account ''',style: TextStyle(fontSize: 15),),
@@ -140,57 +121,57 @@ time.''',
                             ],
 
                           )
-
                         ],
                       ),
-                    ),
-                  ),
-                  const Positioned(
-                    top: -40, // Adjust this value to move the CircleAvatar inside the visible area
-                    left: 0,
-                    right: 0,
-                    child: Align(
-                      alignment: Alignment.topCenter,
-                      child: CircleAvatar(
-                        radius: 60,
-                        backgroundColor: Colors.white,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.black12,
-                          radius: 45,
-                          child: Icon(
-                            Icons.info_sharp,
-                            size: 50,
-                            color: Color(0xFFFF623D),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>UpdateInformationScreen ()));
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFFF623D),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  minimumSize: const Size(60, 60), // Full width button
-                ),
-                child: const Text(
-                  '>>',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+      )
+                    );
+    //               );
+    //               const Positioned  (
+    //                 top: -40, // Adjust this value to move the CircleAvatar inside the visible area
+    //                 left: 0,
+    //                 right: 0,
+    //                 child: Align(
+    //                   alignment: Alignment.topCenter,
+    //                   child: CircleAvatar(
+    //                     radius: 60,
+    //                     backgroundColor: Colors.white,
+    //                     child: CircleAvatar(
+    //                       backgroundColor: Colors.black12,
+    //                       radius: 45,
+    //                       child: Icon(
+    //                         Icons.info_sharp,
+    //                         size: 50,
+    //                         color: Color(0xFFFF623D),
+    //                       ),
+    //                     ),
+    //                   ),
+    //                 ),
+    //               ),
+    //             ],
+    //           ),
+    //           ElevatedButton(
+    //             onPressed: () {
+    //               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>UpdateInformationScreen ()));
+    //             },
+    //             style: ElevatedButton.styleFrom(
+    //               backgroundColor: const Color(0xFFFF623D),
+    //               shape: RoundedRectangleBorder(
+    //                 borderRadius: BorderRadius.circular(30),
+    //               ),
+    //               minimumSize: const Size(60, 60), // Full width button
+    //             ),
+    //             child: const Text(
+    //               '>>',
+    //               style: TextStyle(
+    //                 color: Colors.white,
+    //                 fontSize: 16,
+    //               ),
+    //             ),
+    //           ),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 }
